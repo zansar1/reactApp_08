@@ -47,26 +47,24 @@
 }
 
 .filter-list {
-	display: flex;
+  display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: 10px; /* Add margin between search bar and dropdown */
 }
 
 input[type="text"] {
   padding: 8px;
   margin-left: 5px; /* Adjust the margin as needed */
+  margin-bottom: 10px; /* Add margin between search bar and dropdown */
 }
 
 #dropdown-basic {
   margin-right: 25px; /* Adjust the margin as needed */
 }
 
-.filter-options.column-view {
-  flex-direction: column;
-}
-
-.filter-options input {
-  margin-left: 10px; /* Add margin between dropdown and input */
+.filter-options.column-view input {
+  margin-left: 0; /* Reset margin for input in column view if needed */
 }
 
 .filter-options.column-view .dropdown-menu {
