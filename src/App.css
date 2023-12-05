@@ -1,15 +1,24 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 80px;
+  width: auto;
   pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: reduce) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: none;
   }
 }
 
@@ -20,7 +29,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(12px + 2vmin);
   color: white;
 }
 
@@ -39,44 +48,36 @@
 
 .filter-options {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  margin-top: 20px; /* Adjust margin as needed */
-}
-
-/* Style changes for "Type: All" button */
-.filter-options .dropdown-toggle {
-  background-color: #4CAF50; /* Green background color */
-  color: white; /* White text color */
-  font-size: 16px; /* Bigger font size */
-  margin-right: 5px; /* Adjust margin */
+  margin-top: 20px;
 }
 
 .filter-list {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 10px; /* Add margin between search bar and dropdown */
+  margin-top: 10px;
 }
 
 input[type="text"] {
-  padding: 8px;
-  margin-left: 5px; /* Adjust the margin as needed */
-  margin-bottom: 10px; /* Add margin between search bar and dropdown */
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 #dropdown-basic {
-  margin-right: 25px; /* Adjust the margin as needed */
+  margin-right: 25px;
 }
 
 .filter-options.column-view input {
-  margin-left: 0; /* Reset margin for input in column view if needed */
+  margin-left: 0;
 }
 
 .filter-options.column-view .dropdown-menu {
-  margin-top: 10px; /* Adjust the margin as needed */
+  margin-top: 10px;
 }
 
 /* Optional: Add some styles for the List component items */
@@ -87,4 +88,13 @@ input[type="text"] {
 
 .filter-list ol li {
   margin-bottom: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.filter-list ol li:hover {
+  background-color: #f0f0f0;
 }
