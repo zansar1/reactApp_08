@@ -46,6 +46,14 @@
   margin-top: 20px; /* Adjust margin as needed */
 }
 
+/* Style changes for "Type: All" button */
+.filter-options .dropdown-toggle {
+  background-color: #4CAF50; /* Green background color */
+  color: white; /* White text color */
+  font-size: 16px; /* Bigger font size */
+  margin-right: 5px; /* Adjust margin */
+}
+
 .filter-list {
   display: flex;
   flex-direction: column;
