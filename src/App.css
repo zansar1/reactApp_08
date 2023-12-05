@@ -50,26 +50,52 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+<<<<<<< HEAD
   margin-left: 20px;
+||||||| cb98c03
+=======
+  margin-top: 10px; /* Add margin between search bar and dropdown */
+>>>>>>> origin/master
 }
 
 input[type="text"] {
+<<<<<<< HEAD
   padding: 10px;
   margin-right: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
+||||||| cb98c03
+  padding: 8px;
+  margin-left: 5px; /* Adjust the margin as needed */
+=======
+  padding: 8px;
+  margin-left: 5px; /* Adjust the margin as needed */
+  margin-bottom: 10px; /* Add margin between search bar and dropdown */
+>>>>>>> origin/master
 }
 
 #dropdown-basic {
   margin-right: 25px;
 }
 
+<<<<<<< HEAD
 .filter-options.column-view {
   flex-direction: column;
 }
 
 .filter-options input {
   margin-left: 10px;
+||||||| cb98c03
+.filter-options.column-view {
+  flex-direction: column;
+}
+
+.filter-options input {
+  margin-left: 10px; /* Add margin between dropdown and input */
+=======
+.filter-options.column-view input {
+  margin-left: 0; /* Reset margin for input in column view if needed */
+>>>>>>> origin/master
 }
 
 .filter-options.column-view .dropdown-menu {
