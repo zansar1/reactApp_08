@@ -1,90 +1,182 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
-.App {
-  text-align: center;
+a {
+    text-decoration: none;
+    color: #3d92c9;
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
 }
 
-.App-logo {
-  height: 80px;
-  width: auto;
-  pointer-events: none;
-  animation: App-logo-spin infinite 20s linear;
+h3 {
+    font-weight: 100;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .App-logo {
-    animation: none;
-  }
+/* LAYOUT CSS */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.App-header {
-  background-color: #35424a; /* Updated background color */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(14px + 2vmin); /* Increased font size */
-  color: #fff; /* Updated text color */
+.header {
+    text-align: center;
+    margin: 3em 0;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar {
+    background: #3d4f5d;
+    color: #fff;
+    padding: 1em;
 }
 
-.filter-options {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
+.brand-title,
+.brand-tagline {
+    margin: 0;
+}
+.brand-title {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: #333;
+}
+.brand-tagline {
+    font-weight: 300;
+    color: #b0cadd;
 }
 
-.filter-list {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin-left: 20px;
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-item {
+    display: inline-block;
+    margin-right: 1em;
+}
+.nav-item a {
+    background: #fff;
+    border: 2px solid #b0cadd;
+    color: #333;
+    padding: 0.5em 1em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 85%;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+.nav-item a:hover,
+.nav-item a:focus {
+    background: #3d92c9;
+    border-color: #3d92c9;
+    color: #fff;
+    text-decoration: none;
 }
 
-input[type="text"] {
-  padding: 10px;
-  margin-right: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+.content-subhead {
+    text-transform: uppercase;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
 }
 
-#dropdown-basic {
-  margin-right: 25px;
+.content {
+    padding: 2em 0;
 }
 
-.filter-options.column-view input {
-  margin-left: 0;
+.post {
+    padding-bottom: 2em;
+}
+.post-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 0.2em;
+}
+.post-description {
+    font-family: 'Georgia', "Cambria", serif;
+    color: #666;
+    line-height: 1.8em;
+}
+.post-meta {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
 }
 
-.filter-options.column-view .dropdown-menu {
-  margin-top: 10px;
+.post-category {
+    margin: 0 0.1em;
+    padding: 0.3em 1em;
+    color: #fff;
+    font-size: 80%;
+    border-radius: 3px;
+    text-transform: uppercase;
 }
 
-.filter-list ol {
-  list-style-type: none;
-  padding: 0;
+.post-category-design {
+    background: #5aba59;
+}
+.post-category-pure {
+    background: #4d85d1;
+}
+.post-category-yui {
+    background: #8156a7;
+}
+.post-category-js {
+    background: #df2d4f;
 }
 
-.filter-list ol li {
-  margin-bottom: 10px;
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
+.post-images {
+    margin: 1em 0;
 }
 
-.filter-list ol li:hover {
-  background-color: #f0f0f0;
+.footer {
+    padding: 1em 0;
+    background: #333;
+    color: #ccc;
+    text-align: center;
+}
+
+.footer a {
+    color: #ccc;
+    font-size: 80%;
+    transition: color 0.3s ease;
+}
+.footer a:hover,
+.footer a:focus {
+    color: #fff;
+}
+
+@media (min-width: 48em) {
+    .content {
+        padding: 2em 0;
+        margin-left: 25%;
+    }
+
+    .header {
+        margin: 3em 2em;
+        text-align: center;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+
+    .footer {
+        text-align: center;
+    }
 }
